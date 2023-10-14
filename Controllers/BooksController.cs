@@ -49,7 +49,7 @@ namespace LibApp.Controllers
         public IActionResult Random()
         {
             var firstbook = new Book() { Author = "random author", Title = "Random tilte" };
-            return View(firstbook);
+            return RedirectToAction("Index", "Home",new { page=1, sortBy = "ttle" });
         }
 
         // POST: BooksController/Edit/5
